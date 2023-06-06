@@ -44,11 +44,11 @@ pipeline {
         }
     }
     post {
-         failure {
-            emailext body: 'El pipeline ha fallado. Por favor, revisa los registros para obtener más detalles.',
-                     subject: 'Fallo en la ejecución del pipeline',
-                     to: 'jaimeunir@example.com'
-        }
+//          failure {
+//             emailext body: 'El pipeline ha fallado. Por favor, revisa los registros para obtener más detalles.',
+//                      subject: 'Fallo en la ejecución del pipeline',
+//                      to: 'jaimeunir@example.com'
+//         }
         always {
             junit 'results/*_result.xml'
             cleanWs()
